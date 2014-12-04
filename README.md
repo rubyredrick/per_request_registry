@@ -1,6 +1,19 @@
 # PerRequestRegistry
 
-TODO: Write a gem description
+Provide a nice api to request local variables
+
+  ActiveSupport::PerRequestRegistry provides a clean api to setting
+  and retrieving thread local variables but if a rack app is deployed
+  on a platform which reuses threads old variables might hang around
+
+  Steve Klabnik's request_store
+  https://github.com/steveklabnik/request_store
+  clears request partitioned thread local variables between rack
+  requests, but requires using a not so pretty hash-like API
+
+This gem combines the best of both worlds,
+
+Thanks to Justin Weiss for the ideas http://www.justinweiss.com/blog/2014/12/01/better-globals-with-a-tiny-activesupport-module/
 
 ## Installation
 
